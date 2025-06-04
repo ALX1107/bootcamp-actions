@@ -15,8 +15,7 @@ jobs:
             - name: Working dir after action
               run: ls -al  
 
-    second_job:
-        if: false
+    second_job:      
         needs: first_job
         runs-on : ubuntu-latest
         steps:
