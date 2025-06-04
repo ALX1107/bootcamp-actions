@@ -10,10 +10,12 @@ jobs:
             - name: Working dir
               run: ls -al
             - name: Action
-              uses: Actions/checkout@v4 
-            
+              uses: Actions/checkout@v4        
             - name: Working dir after action
               run: ls -al  
+            
+            - name: working dir
+              run: echo $GITHUB_OUTPUT  
 
     second_job:      
         needs: first_job
